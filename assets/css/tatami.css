@@ -1,0 +1,121 @@
+/* sass code: tatami
+ * crafted by 2016 IrwanPhan
+ * thanks for the insight from Luke Harrison http://www.lukeharrison.net
+ * inspired from Susy
+ *
+ * http://www.orangeguild.us
+ * Date: Fri Mar 18 2016
+ */
+.container {
+  max-width: 1140px;
+  margin: 0px auto; }
+
+.row {
+  width: 100%;
+  padding: 0 15px;
+  display: table; }
+
+.col-1 {
+  width: 5.92105%;
+  float: left;
+  margin-left: 2.63158%; }
+  .col-1:first-child {
+    margin-left: 0; }
+  .col-1 .row {
+    padding: 0; }
+
+.col-2 {
+  width: 14.47368%;
+  float: left;
+  margin-left: 2.63158%; }
+  .col-2:first-child {
+    margin-left: 0; }
+  .col-2 .row {
+    padding: 0; }
+
+.col-3 {
+  width: 23.02632%;
+  float: left;
+  margin-left: 2.63158%; }
+  .col-3:first-child {
+    margin-left: 0; }
+  .col-3 .row {
+    padding: 0; }
+
+.col-4 {
+  width: 31.57895%;
+  float: left;
+  margin-left: 2.63158%; }
+  .col-4:first-child {
+    margin-left: 0; }
+  .col-4 .row {
+    padding: 0; }
+
+.col-5 {
+  width: 40.13158%;
+  float: left;
+  margin-left: 2.63158%; }
+  .col-5:first-child {
+    margin-left: 0; }
+  .col-5 .row {
+    padding: 0; }
+
+.col-6 {
+  width: 48.68421%;
+  float: left;
+  margin-left: 2.63158%; }
+  .col-6:first-child {
+    margin-left: 0; }
+  .col-6 .row {
+    padding: 0; }
+
+.col-7 {
+  width: 57.23684%;
+  float: left;
+  margin-left: 2.63158%; }
+  .col-7:first-child {
+    margin-left: 0; }
+  .col-7 .row {
+    padding: 0; }
+
+.col-8 {
+  width: 65.78947%;
+  float: left;
+  margin-left: 2.63158%; }
+  .col-8:first-child {
+    margin-left: 0; }
+  .col-8 .row {
+    padding: 0; }
+
+.col-9 {
+  width: 74.34211%;
+  float: left;
+  margin-left: 2.63158%; }
+  .col-9:first-child {
+    margin-left: 0; }
+  .col-9 .row {
+    padding: 0; }
+
+.col-10 {
+  width: 82.89474%;
+  float: left;
+  margin-left: 2.63158%; }
+  .col-10:first-child {
+    margin-left: 0; }
+  .col-10 .row {
+    padding: 0; }
+
+.col-11 {
+  width: 91.44737%;
+  float: left;
+  margin-left: 2.63158%; }
+  .col-11:first-child {
+    margin-left: 0; }
+  .col-11 .row {
+    padding: 0; }
+
+.clear {
+  margin-left: 0px;
+  clear: left; }
+
+/*# sourceMappingURL=tatami.css.map */
