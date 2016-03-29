@@ -2,9 +2,8 @@
  * sass code: tatami
  * crafted by 2016 IrwanPhan
  * thanks for the insight from Luke Harrison http://www.lukeharrison.net
- * inspired from Susy
- *
- * http://www.orangeguild.us
+ * 
+ * fork at https://github.com/irwanphan/tatami
  * Date: Fri Mar 18 2016
  */ 
 
@@ -36,7 +35,6 @@ $column-width: ($width - ($gutter * ($columns - 1))) / $columns
 // row comes before columns, familiarity with zurb
 @mixin row($row-width: 100%)
 	width: $row-width
-	padding: 0 $padding
 	display: table
 
 @mixin addcol($i)
@@ -49,13 +47,18 @@ $column-width: ($width - ($gutter * ($columns - 1))) / $columns
 		$gutter-percentage: ($gutter / $width) * 100%
 		width: $col
 		float: left
-		margin-left: $gutter-percentage
+		margin-right: $gutter-percentage
 	@else
 		$col: $col
 		width: $col
 		float: left
-		margin-left: $gutter
-	&:first-child
-		margin-left: 0
-	.row
-		padding: 0
+		margin-right: $gutter
+	&:last-child
+		margin-right: 0
+
+@mixin breakpoints($media-name, $media-min-width)
+	@if $responsive == true
+		@media screen and (min-width: $media-min-width)
+			@for $x from 1 to $columns
+				.#{$media-name}-#{$x}
+					@include addcol($x)

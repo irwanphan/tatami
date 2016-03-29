@@ -1,2 +1,2 @@
 # tatami
-simple sass-based grid system, inspired by how Susy Sass work
+Simple sass-based grid system.
