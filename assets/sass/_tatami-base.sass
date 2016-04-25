@@ -21,7 +21,7 @@ $responsive: true
 // padding left & right (as half a gutter, 0.5 * gutter)
 $padding: $padding-scale * $gutter
 // calculate the column width
-$column-width: ($width - ($gutter * ($columns - 1))) / $columns
+$column-width: $width / $columns
 
 // set base container
 @mixin container($container-width: $width)
@@ -36,8 +36,26 @@ $column-width: ($width - ($gutter * ($columns - 1))) / $columns
 @mixin row($row-width: 100%)
 	width: $row-width
 	display: table
+	margin: 0 auto
 
 @mixin addcol($i)
+	// calculate the grid's width
+	$col: $column-width * $i
+	// calculate responsive grid's width, and if not
+	@if $responsive == true
+		$col: ($col / $width) * 100%
+		// gutter's percentage for responsive view
+		$column-padding: ($padding / $width) * 100%
+		width: $col
+		float: left
+		padding: 0 $column-padding
+	@else
+		$col: $col
+		width: $col
+		float: left
+		padding: 0 $padding
+
+@mixin push($i)
 	// calculate the grid's width
 	$col: ($column-width * $i) + ($gutter * ($i - 1))
 	// calculate responsive grid's width, and if not
@@ -45,17 +63,10 @@ $column-width: ($width - ($gutter * ($columns - 1))) / $columns
 		$col: ($col / $width) * 100%
 		// gutter's percentage for responsive view
 		$gutter-percentage: ($gutter / $width) * 100%
-		width: $col
-		float: left
-		margin-right: $gutter-percentage
+		margin-left: $col + $gutter-percentage
 	@else
-		$col: $col
-		width: $col
-		float: left
-		margin-right: $gutter
-	&:last-child
-		margin-right: 0
-
+		margin-left: $col + ($i * $gutter)
+		
 @mixin breakpoints($media-name, $media-min-width)
 	@if $responsive == true
 		@media screen and (min-width: $media-min-width)
